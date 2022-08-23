@@ -5,7 +5,7 @@
 
 static struct quirc *qr;
 
-int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size) {
+extern "C" int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size) {
   int num_codes, i;
   int w = 100;
   int h = (size - (size % w)) / w;

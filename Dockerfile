@@ -1,4 +1,4 @@
-FROM aflplusplus/aflplusplus
+FROM --platform=amd64 aflplusplus/aflplusplus
 
 RUN  apt-get update \
      && apt-get install -y --no-install-recommends libjpeg9-dev libpng-dev python3-pip \
