@@ -6,6 +6,7 @@
 static struct quirc *qr;
 
 extern "C" int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size) {
+  qr = quirc_new();
   int num_codes, i;
   int w = 100;
   int h = (size - (size % w)) / w;
